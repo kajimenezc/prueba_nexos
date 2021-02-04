@@ -2,8 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<title>LIBROS DISPONIBLES</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
 </head>
 <body>
 	<div class="container mt-4">
@@ -17,7 +21,6 @@
 					<th>NUMERO DE PAGINAS</th>
 					<th>EDITORIAL</th>
 					<th>AUTOR</th>
-					<th>ACCIONES</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -30,14 +33,9 @@
 					<td th:text="${libros.num_paginas}"></td>
 					<td th:text="${libros.editorial}"></td>
 					<td th:text="${libros.autor}"></td>
-					<td><a class="btn btn-warning">Editar</a>
-					<a class="btn btn-danger">Eliminar</a></td>
 				</tr>
-
 			</tbody>
-
 		</table>
 	</div>
-
 </body>
 </html>

@@ -17,18 +17,18 @@ public class EditorialesREST {
 
 	@PostMapping
 	public String createEditorial(@RequestBody Editoriales editoriales) {
-		
+	
+		// Declaración de variables
 		String mensaje = "Proceso realizado con exito";
 		String validate = " ";
 		
-		if(editoriales.getNombre().isEmpty()) { validate = "X"; }
-		if(editoriales.getDireccion().isEmpty()) { validate = "X"; }
-		if(editoriales.getTelefono() <= 0 ) { validate = "X"; }
-		if(editoriales.getNombre().isEmpty()) { validate = "X"; }
+		// Validacións para la creación
+		if(editoriales.getNombre().isEmpty()) { validate = "X"; mensaje = "Verifique campo nombre"; }
+		if(editoriales.getDireccion().isEmpty()) { validate = "X"; mensaje = "Verifique campo dirección"; }
+		if(editoriales.getTelefono() < 0 ) { validate = "X"; mensaje = "Verifique campo telefono"; }
+		if(editoriales.getMax_libros() >= 9999) { validate = "X"; mensaje = "Verifique maximo de libros"; }
 		
-		if( validate == "X" ) {
-			mensaje = "Verifique los campos obligatorios";
-		}else {
+		if( validate != "X" ) {
 			editorialesDAO.save(editoriales);
 		}
 		

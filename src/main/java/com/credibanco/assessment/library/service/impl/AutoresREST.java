@@ -18,9 +18,11 @@ public class AutoresREST {
 	@PostMapping
 	public String createEditorial(@RequestBody Autores autores) {
 		
+		// Declaración de variables
 		String mensaje = "Proceso realizado con exito";
 		String validate = " ";
 		
+		// Validacións para la creación
 		if(autores.getNombre().isEmpty()) { validate = "X"; }
 		
 		if( validate == "X" ) {
