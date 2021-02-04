@@ -15,20 +15,10 @@ public class Editoriales {
 	private int id;
 	private String nombre;
 	private String direccion;
-	private  String telefono;
+	private int telefono;
 	private String correo;
-	private String max_libros;
+	private int max_libros;
 	
-	public Editoriales(int id, String nombre, String direccion, String telefono, String correo, String max_libros) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.direccion = direccion;
-		this.telefono = telefono;
-		this.correo = correo;
-		this.max_libros = max_libros;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -53,11 +43,11 @@ public class Editoriales {
 		this.direccion = direccion;
 	}
 
-	public String getTelefono() {
+	public int getTelefono() {
 		return telefono;
 	}
 
-	public void setTelefono(String telefono) {
+	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
 
@@ -69,11 +59,11 @@ public class Editoriales {
 		this.correo = correo;
 	}
 
-	public String getMax_libros() {
+	public int getMax_libros() {
 		return max_libros;
 	}
 
-	public void setMax_libros(String max_libros) {
+	public void setMax_libros(int max_libros) {
 		this.max_libros = max_libros;
 	}
 

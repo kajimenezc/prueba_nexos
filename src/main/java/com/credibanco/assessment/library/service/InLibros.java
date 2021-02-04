@@ -1,4 +1,4 @@
-package com.credibanco.assessment.library.interfaces;
+package com.credibanco.assessment.library.service;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
